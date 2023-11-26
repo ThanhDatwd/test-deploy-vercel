@@ -5,7 +5,7 @@ import {
   BoxImage,
   SideBarMenuItem,
   SideBarWrapper,
-} from "@/styles/GlobalStyle";
+} from "@/styles/globalStyle";
 
 const SideBar = () => {
   return (
