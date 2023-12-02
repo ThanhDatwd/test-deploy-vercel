@@ -1,9 +1,12 @@
+"use client"
 import { Box, Typography } from "@mui/material";
 import { BoxAvatar, BoxFlex } from "@/styles/globalStyle";
+import { useRouter } from 'next/navigation';
 
 export default function TopicCard() {
+  const router = useRouter()
   return (
-    <Box onClick={()=>{}}
+    <Box onClick={()=>{router.push('/learning')}}
       sx={{
         width:'100%',
         boxShadow: " 5px 5px 5px rgba(189, 189, 189, 0.25)",

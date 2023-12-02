@@ -1,7 +1,10 @@
-import "./globals.css";
+
+import { Inter } from "next/font/google";
 import CssBaseline from '@mui/material/CssBaseline';
 import { Experimental_CssVarsProvider as CssVarsProvider } from '@mui/material/styles';
 import theme from '@/theme/index'
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
       <CssVarsProvider theme={theme}>
         <CssBaseline />
         {children}

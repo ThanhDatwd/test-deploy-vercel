@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { styled, Box, Avatar } from "@mui/material";
+import { styled, Box, Avatar, Button } from "@mui/material";
 
 export const AppWrapper = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -55,6 +55,7 @@ export const BoxFlexColumnSpaceBetween = styled(Box)(({ ...props }) => ({
   alignItems: "flex-start",
 }));
 export const BoxFlexColumnCenter = styled(Box)(({ ...props }) => ({
+  height: "100%",
   width: "100%",
   justifyContent: "center",
   flexDirection: "column",
@@ -70,7 +71,9 @@ export const BoxFlexColumnEnd = styled(Box)(({ ...props }) => ({
   alignItems: "flex-end",
   gap: `${props.gap ? props.gap : 10}px`,
 }));
-export const BoxImage = styled(Box)(({ theme }) => ({
+export const BoxImage = styled(Box)(({ ...props }) => ({
+  width: `${props.width ? props.width + "px" : "100%"}`,
+  height: `${props.height ? props.height + "px" : "100%"}`,
   "& img": {
     width: "100%",
     height: "100%",
@@ -180,17 +183,21 @@ export const LightDarkModeBox = styled(Box)(({ theme }) => ({
   background: theme.palette.secondary.main,
 }));
 
-export const FlashCard = styled(Box)(({ theme }) => ({
+export const FlashCardWrapper = styled(Box)(({ theme }) => ({
+  position: "relative",
+}));
+
+export const FlashCardStyle = styled(Box)(({ theme }) => ({
   width: "300px",
   minHeight: "400px",
-  borderRadius:'20px',
-  position: "relative" ,
-  transformStyle: "preserve-3d" ,
+  borderRadius: "20px",
+  position: "relative",
+  transformStyle: "preserve-3d",
   animation: "flip 3s linear infinite",
   transition: " transform 1s",
   transform: "rotateY(0deg)",
   background: theme.palette.primary.main,
-  boxShadow:' 0 .5rem 1rem rgba(0,0,0,.15)',
+  boxShadow: " 0 .5rem 1rem rgba(0,0,0,.15)",
   "&.front": {
     transform: "rotateY(0deg)",
   },
@@ -200,15 +207,50 @@ export const FlashCard = styled(Box)(({ theme }) => ({
 }));
 export const FlashCardFront = styled(Box)(({ theme }) => ({
   position: "absolute",
-  backfaceVisibility: 'hidden',
+  backfaceVisibility: "hidden",
   width: " 100%",
   height: "100%",
   transform: "rotateY(0)",
+  padding: "30px 20px ",
 }));
 export const FlashCardBack = styled(Box)(({ theme }) => ({
   position: "absolute",
-  backfaceVisibility:'hidden',
+  backfaceVisibility: "hidden",
   width: " 100%",
   height: "100%",
   transform: "rotateY(180deg)",
+  padding: "30px 20px ",
+}));
+export const FlashCarHeader = styled(Box)(({ theme }) => ({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width:'100%',
+  transform: "translateY(-50%)",
+  zIndex: 2,
+}));
+export const FlashCarFooter = styled(Box)(({ theme }) => ({
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  width:'100%',
+  transform: "translateY(50%)",
+}));
+export const ButtonWrapperStyle = styled(Box)(({ ...props }) => ({
+  position: "relative",
+  height: "50px",
+  borderRadius: "50px",
+  border: "none",
+  width: "250px",
+}));
+export const ButtonStyle = styled(Button)(({ ...props }) => ({
+  position: "absolute",
+  height: "100%",
+  width: "100%",
+  minWidth: "0",
+  borderRadius: "inherit",
+  left: 0,
+  fontSize: "20px",
+  top: "-6px",
+  border: "none",
 }));

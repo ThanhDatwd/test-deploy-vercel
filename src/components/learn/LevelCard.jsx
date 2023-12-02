@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+"use client"
 import { useState } from "react";
 import { Box, Paper, Typography } from "@mui/material";
 import { BoxFlex, BoxFlexColumn, BoxImage } from "@/styles/globalStyle";

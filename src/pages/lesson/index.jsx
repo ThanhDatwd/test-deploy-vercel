@@ -1,13 +1,14 @@
 /* eslint-disable no-unused-vars */
+"use client"
 import React from "react";
 import { Box, Grid, Paper, Typography } from "@mui/material";
 import { HeaderLearning } from "@/styles/learnStyle";
-import Layout from "@/components/layouts";
+import LayoutSideBar from "@/components/LayoutSideBars";
 import { BoxFlexColumn } from "@/styles/globalStyle";
 import LevelCard from "@/components/learn/LevelCard";
 const LessonPage = () => {
   return (
-    <Layout>
+    <LayoutSideBar>
       <Grid container>
         <Grid item md={8}>
           <HeaderLearning>
@@ -24,7 +25,7 @@ const LessonPage = () => {
           </BoxFlexColumn>
         </Grid>
       </Grid>
-    </Layout>
+    </LayoutSideBar>
   );
 };
 

@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
-import Layout from "@/components/layouts";
+import LayoutSideBar from "@/components/LayoutSideBars";
 import React from "react";;
 
 const HomePage = () => {
   return (
-    <Layout>
+    <LayoutSideBar>
       <div>this is home page</div>
-    </Layout>
+    </LayoutSideBar>
   );
 };
 
